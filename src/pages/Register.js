@@ -11,7 +11,7 @@ export default function Register() {
 
   const register = (e) => {
     e.preventDefault();
-    fetch(`http://localhost:8000/register`, {
+    fetch(`https://todo-aditya0183.herokuapp.com/register`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
