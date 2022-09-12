@@ -18,7 +18,7 @@ export default function Login() {
 
   const login = (e) => {
     e.preventDefault();
-    fetch(`http://localhost:8000/login`, {
+    fetch(`https://todo-aditya0183.herokuapp.com/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -45,27 +45,40 @@ export default function Login() {
 
   return (
     <div>
-      <h1 style={{ fontSize: "3rem", color: "black" }}>Login</h1>
-      {error && <span style={{ color: "red" }}>{error}</span>}
+      <h1 style={{ fontSize: "5rem", color: "white" }}>Login</h1>
+      {error ? (
+        <span style={{ color: "red", fontSize: "2.5rem" }}>{error}</span>
+      ) : (
+        <span style={{ color: "red", fontSize: "2.5rem" }}>Please Wait</span>
+      )}
+      <br />
+      <br />
+      <br />
       <form onSubmit={login}>
-       <label style={{ fontSize: "1.5rem" }}>Username</label>
-<br/>
+        <label style={{ fontSize: "1.5rem", color: "white" }}>Username</label>
+        <br />
         <input
           onChange={(e) => setUsername(e.target.value)}
           placeholder="username"
+          style={{ borderRadius: "25px" }}
         />
         <br />
-     <br/>
-<label style={{ fontSize: "1.5rem" }}>Password</label>
+        <br />
+        <label style={{ fontSize: "1.5rem", color: "white" }}>Password</label>
 
-     <br/>
+        <br />
         <input
           type="password"
           onChange={(e) => setPassword(e.target.value)}
           placeholder="password"
+          style={{ borderRadius: "25px" }}
         />
         <br />
+        <br />
         <button type="submit">Login</button>
+        <br/>
+        <br/>
+        <a href="/register" style={{color:"yellow",textDecoration:"none"}}>Wanna Register?</a>
       </form>
     </div>
   );

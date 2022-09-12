@@ -12,29 +12,41 @@ export default function Welcome() {
 
   return (
     <div>
-    <br/>
-    <br/>
+      <br />
+      <br />
       {credentails && <button onClick={logout}>Logout</button>}
-      <h1 style={{fontSize:"3rem", color:"black"}}>Welcome {credentails && credentails.username}</h1>
+      <h1 style={{ color: "white", fontSize: "5rem" }}>
+        Welcome {credentails && credentails.username}
+      </h1>
+
       {!credentails && (
-        <Link
-          to="/register"
-          style={{ textDecoration: "none", color: "green", fontSize: "2rem" }}
-        >
-          Register
-        </Link>
+        <div>
+          <Link
+            to="/login"
+            style={{
+              textDecoration: "none",
+              color: "white",
+              fontSize: "3rem",
+              marginRight: "25%",
+            }}
+          >
+            Login
+          </Link>
+          
+          <Link
+            to="/register"
+            style={{ textDecoration: "none", color: "white", fontSize: "3rem" }}
+          >
+            Register
+          </Link>
+        </div>
       )}
       <br />
-      <br/>
-      <br/>
-      {!credentails && (
-        <Link
-          to="/login"
-          style={{ textDecoration: "none", color: "red", fontSize: "2rem" }}
-        >
-          Login
-        </Link>
-      )}
+      <br />
+      <br />
+      {/* {!credentails && (
+      
+      )} */}
       {credentails && <Todos />}
     </div>
   );

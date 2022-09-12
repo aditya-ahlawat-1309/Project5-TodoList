@@ -20,7 +20,7 @@ export default function Todos() {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:8000/todos`, {
+    fetch(`https://todo-aditya0183.herokuapp.com/todos`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -60,15 +60,21 @@ export default function Todos() {
   };
 
   return (
-    <div>
+    <div style={{marginTop:"-5%"}}>
+    <span style={{color:"red",fontSize:"1.5rem"}}>See the Todos in the Uncompleted Section</span>
+      <br/>
       <select value={filter} onChange={(e) => changeFilter(e.target.value)}>
-        <option value="completed">Completed</option>
-        <option value="uncompleted">Uncompleted</option>
+        <option value="completed" style={{ color: "black",fontSize:"1rem",borderRadius:"25px" }}>
+          Completed
+        </option>
+        <option value="uncompleted" style={{ color: "black",fontSize:"1rem",borderRadius:"25px" }}>
+          Uncompleted
+        </option>
       </select>
 
       {getTodos().map((todo) => (
         <>
-        <br/>
+          <br />
           <div
             key={todo.id}
             style={{
