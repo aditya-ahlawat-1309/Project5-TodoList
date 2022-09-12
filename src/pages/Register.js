@@ -53,7 +53,7 @@ export default function Register() {
         <input
           onChange={(e) => setUsername(e.target.value)}
           placeholder="username"
-          style={{ borderRadius: "25px" }}
+          style={{ borderRadius: "25px", fontSize: "1.5rem" }}
         />
         <br />
         <br />
@@ -64,16 +64,17 @@ export default function Register() {
           type="password"
           onChange={(e) => setPassword(e.target.value)}
           placeholder="password"
-          style={{ borderRadius: "25px" }}
+          style={{ borderRadius: "25px", fontSize: "1.5rem" }}
         />
         <br />
         <br />
         <button type="submit">Register</button>
         <div>
-  <br />
-  <a href="/login" style={{color: "yellow",textDecoration:"none"}}>How 'bout Login?</a>
-</div>
-
+          <br />
+          <a href="/login" style={{ color: "yellow", textDecoration: "none" }}>
+            How 'bout Login?
+          </a>
+        </div>
       </form>
     </div>
   );
