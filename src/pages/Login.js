@@ -18,7 +18,7 @@ export default function Login() {
 
   const login = (e) => {
     e.preventDefault();
-    fetch(`https://todo-aditya0183.herokuapp.com/login`, {
+    fetch(`https://helpful-toad-top-coat.cyclic.app/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
