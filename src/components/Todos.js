@@ -9,7 +9,7 @@ export default function Todos() {
   const [filter, setFilter] = useState("uncompleted");
 
   const persist = (newTodos) => {
-    fetch(`http://localhost:8000/todos`, {
+    fetch(`https://helpful-toad-top-coat.cyclic.app/todos`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -20,7 +20,7 @@ export default function Todos() {
   };
 
   useEffect(() => {
-    fetch(`https://todo-aditya0183.herokuapp.com/todos`, {
+    fetch(`https://helpful-toad-top-coat.cyclic.app/todos`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
