@@ -11,7 +11,7 @@ export default function Register() {
 
   const register = (e) => {
     e.preventDefault();
-    fetch(`https://todo-aditya0183.herokuapp.com/register`, {
+    fetch(`https://helpful-toad-top-coat.cyclic.app/register`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
